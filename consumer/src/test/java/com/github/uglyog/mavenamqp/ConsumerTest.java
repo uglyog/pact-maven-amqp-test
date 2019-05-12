@@ -9,9 +9,6 @@ import au.com.dius.pact.model.v3.messaging.MessagePact;
 import org.junit.Rule;
 import org.junit.Test;
 
-import java.util.HashMap;
-import java.util.Map;
-
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
 
@@ -26,7 +23,7 @@ public class ConsumerTest
             .integerType("value", 100)
             .stringValue("type", "COST");
 
-        return builder.given("SomeProviderState")
+        return builder
           .expectsToReceive("a test message")
           .withContent(body)
           .toPact();
