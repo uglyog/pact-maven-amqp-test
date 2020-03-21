@@ -11,7 +11,7 @@ public class Consumer
 {
   public boolean processMessage(byte[] message) {
     try {
-      JsonElement element = new JsonParser().parse(new String(message, Charset.forName("UTF-8")));
+      JsonElement element = JsonParser.parseString(new String(message, Charset.forName("UTF-8")));
       JsonObject jsonObject = element.getAsJsonObject();
       long value = jsonObject.getAsJsonPrimitive("value").getAsLong();
       String type = jsonObject.getAsJsonPrimitive("type").getAsString();
