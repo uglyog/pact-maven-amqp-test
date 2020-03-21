@@ -31,8 +31,8 @@
     </dependency>
     <dependency>
       <groupId>au.com.dius</groupId>
-      <artifactId>pact-jvm-provider-junit_2.12</artifactId>
-      <version>LATEST</version>
+      <artifactId>pact-jvm-provider-junit</artifactId>
+      <version>4.0.7</version>
       <scope>test</scope>
     </dependency>
     <dependency>
