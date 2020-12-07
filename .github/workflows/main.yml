@@ -11,8 +11,11 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 11
-      - name: Compile with Maven
-        run: mvn -B -U compile
-      - name: Test
-        run: mvn -B -U test verify
-      
+      - name: Compile Consumer
+        run: mvn -B -U compile -f consumer/pom.xml
+      - name: Compile Provider
+        run: mvn -B -U compile -f provider/pom.xml
+      - name: Test Consumer
+        run: mvn -B -U test verify -f consumer/pom.xml
+      - name: Test Provider
+        run: mvn -B -U test verify -f provider/pom.xml
