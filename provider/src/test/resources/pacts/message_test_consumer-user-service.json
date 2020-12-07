@@ -12,8 +12,8 @@
                 "contentType": "application/json"
             },
             "contents": {
-                "testParam1": "value1",
-                "testParam2": "value2"
+                "test_param1": "value1",
+                "test_param2": "value2"
             },
             "providerState": "SomeProviderState"
         }
