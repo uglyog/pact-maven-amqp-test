@@ -33,11 +33,13 @@ public class UserPactTest {
 
     @BeforeEach
     public void setUp(PactVerificationContext context) {
+        System.out.println("IS NOT NULL: " + mapper);
         context.setTarget(new MessageTestTarget(Collections.singletonList("com.github.uglyog.mavenamqp")));
     }
 
     @PactVerifyProvider("user created message")
     public String verifyUserCreatedMessage() throws JsonProcessingException {
+        System.out.println("IS NULL: " + mapper);
         return mapper.writeValueAsString(new JavaMessage());
     }
 
